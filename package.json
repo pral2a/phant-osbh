@@ -1,0 +1,23 @@
+{
+  "name": "phantconfig-custom",
+  "version": "1.0.0",
+  "description": "Custom phant server configuration for OSBH",
+  "main": "index.js",
+  "bin": "./index.js",
+  "dependencies": {
+    "phant": "^6.2.1",
+    "phant-stream-csv": "^2.1.0",
+    "phant-meta-nedb": "^3.1.0",
+    "phant-keychain-hex": "^1.0.0"
+    },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "phant",
+    "IoT",
+    "SparkFun"
+  ],
+  "license": "GPL-3.0"
+}
+

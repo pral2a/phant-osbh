@@ -1,0 +1,6 @@
+check process phant-osbh with pidfile "/var/run/phant-osbh.pid"
+	start program = "/etc/init.d/phant-osbh start"
+   	stop program = "/etc/init.d/phant-osbh stop"
+ 	if failed port 8085 type tcp then restart
+ 	if failed port 8086 type tcp then restart
+  	if 5 restarts within 5 cycles then timeout
