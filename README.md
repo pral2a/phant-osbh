@@ -53,6 +53,14 @@ please visit [data.sparkfun.com/config](https://data.sparkfun.com/config).
   * **metadata** - meta
   * **keychain** - keychain
 
+### Deployment
+
+* Check the deployment folder for the scripts:
+
+  * nginx: running on a reverse nginx proxy to support multiple installation on the default http port.
+  * linux daemon: running as a node forever process managed as a daemon.
+  * monit: monitored using monit.
+
 
 ## License
 Copyright (c) 2014 SparkFun Electronics. Licensed under the GPL v3 license.
