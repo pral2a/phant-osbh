@@ -3,7 +3,7 @@
 var Phant = require('phant'),
     app = Phant();
 
-Phant.HttpServer.listen(8085);
+Phant.HttpServer.listen(8087);
 
 // METADATA
 // ========
@@ -66,6 +66,15 @@ var defaultManager = Phant.TelnetManager({
 });
 
 app.registerManager(defaultManager);
+
+var PhantManagerHttp = require('phant-manager-http')({
+  validator: validator,
+  metadata: meta,
+  keychain: keychain
+});
+
+Phant.HttpServer.use(PhantManagerHttp);
+app.registerManager(PhantManagerHttp);
 
 console.log(
   "            .-.._\n      __  \/`" +
